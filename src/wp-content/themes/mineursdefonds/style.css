@@ -2506,12 +2506,12 @@ body {
 
 a {
   transition: color 110ms ease-in-out;
-  color: #0073aa;
+  color: #000000;
 }
 
 a:hover,
 a:active {
-  color: #005177;
+  color: #a5a2a8;
   outline: 0;
   text-decoration: none;
 }
@@ -2731,16 +2731,16 @@ form p {
 --------------------------------------------------------------*/
 a {
   transition: color 110ms ease-in-out;
-  color: #0073aa;
+  color: #000000;
 }
 
 a:visited {
-  color: #0073aa;
+  color: #aaa5a6;
 }
 
 a:hover,
 a:active {
-  color: #005177;
+  color: #746f77;
   outline: 0;
   text-decoration: none;
 }

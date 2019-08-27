@@ -1,4 +1,5 @@
 let exploration = false;
+let menuActivated = false;
 
 
 /**
@@ -41,7 +42,17 @@ function rotate() {
     document.getElementById('nav-menu-icon').classList.toggle('nav-menu-icon--open')
 }
 
-const parent = document.getElementById('container');
+function activateMenu() {
+    rotate();
+    menuActivated = !menuActivated;
+    if (menuActivated) {
+        document.getElementById('nav-menu-items').classList.toggle('nav-menu-items--open')
+    } else {
+        document.getElementById('nav-menu-items').classList.toggle('nav-menu-items--open')
+    }
+}
+
+const parent = document.getElementById('exploration');
 const parallax = new Parallax(parent, {
     invertX: true,
     invertY: true,

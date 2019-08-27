@@ -5,13 +5,21 @@ body {
     height: 100vh;
     overflow: hidden;
 }
-svg {
-    width: 100vw;
-    height: 100vh;
-    cursor: none;
-    color: #0b0b0b;
+
+
+/* Exploration */
+.exploration {
+    visibility: hidden;
+    opacity: 0;
 }
-body #container {
+
+.exploration.exploration--mode {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#exploration {
     margin: auto;
     top: 0px;
     left: 0px;
@@ -21,7 +29,15 @@ body #container {
     max-height: 100%;
     pointer-events: all;
 }
-body .planet {
+
+svg.exploration {
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+    color: #0b0b0b;
+}
+
+#exploration .fonds {
     z-index: 1;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,92 +47,83 @@ body .planet {
     height: 100%;
     overflow: hidden;
 }
-body .cloud {
+
+#exploration .roche {
     z-index: 10;
     position: relative;
     margin: auto;
-    height: 300px;
-    width: 300px;
-    bottom: -60%;
-    right: 40%;
     transition: filter 3s;
 }
 
-body .cloud .puff {
-    z-index: 10;
-    background: #fff;
-    position: absolute;
-    border-radius: 150px;
-    width: 90px;
-    height: 90px;
+#exploration .roche:hover {
+    -webkit-filter: saturate(8);
+    filter: saturate(8);
     transition: filter 3s;
 }
-.text {
+
+#exploration .roche:hover .text {
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+#exploration .roche img {
+    position: absolute;
+}
+
+#exploration .roche .text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 55px;
     opacity: 0;
     transition: opacity 3s;
     color: white;
+    font-family: raleway-bold sans-serif;
+    font-weight: bold;
 }
 
-body .cloud:hover {
-    -webkit-filter: saturate(8);
-    filter: saturate(8);
-    transition: filter 3s;
+#exploration .roche_1 {
+    height: 200px;
+    width: 200px;
+    bottom: -60%;
+    right: 40%;
 }
-
-body .cloud:hover .text {
-    opacity: 1;
-    transition: opacity 3s;
-}
-
-body .cloud2 {
-    z-index: 10;
-    position: relative;
-    margin: auto;
-    height: 300px;
-    width: 300px;
-    bottom: 50%;
+#exploration .roche_2 {
+    height: 200px;
+    width: 200px;
+    bottom: 8%;
     right: -30%;
 }
-
-body .cloud2 .floof {
-    z-index: 10;
-    background: #fff;
-    position: absolute;
-    border-radius: 150px;
-    width: 90px;
-    height: 90px;
-}
-
-body .cloud2:hover {
-    -webkit-filter: saturate(8);
-    filter: saturate(8);
-    transition: filter 3s;
-}
-
-body .cloud2:hover .text {
-    opacity: 1;
-    transition: opacity 3s;
-}
-
-/* Exploration */
-.exploration {
-    visibility: hidden;
-}
-
-.exploration.exploration--mode {
-    visibility: visible;
-}
-
 
 /* Exploration link */
 .homepage-explore {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 30%;
 }
 
-.homepage-explore > img, .homepage-explore > span {
+.homepage-explore > svg {
+    margin: 10px;
+    width: 90px;
+    height: auto;
+}
+
+.homepage-explore > svg .light-beam{
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.homepage-explore > svg:hover .light-beam{
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.homepage-explore > svg, .homepage-explore > span {
     cursor: pointer;
 }
 
@@ -126,8 +133,16 @@ body .cloud2:hover .text {
 }
 
 .nav-title {
+    position: absolute;
+    width: 100%;
     margin: auto;
     text-align: center;
+}
+
+.nav-menu {
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-title > .citation {
@@ -136,6 +151,7 @@ body .cloud2:hover .text {
 
 .nav-menu-icon > img {
     margin: 10px;
+    margin-left: 0;
     cursor: pointer;
     transition: 0.3s;
     width: 50px;
@@ -145,6 +161,27 @@ body .cloud2:hover .text {
     transform: rotate(90deg);
     transition: 0.3s;
 }
+
+/* nav - menu */
+.nav-menu-items {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s;
+}
+
+.nav-menu-items--open {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.nav-menu-items > .nav-menu-item {
+    margin: 5px;
+    margin-left: 0px;
+
+}
+
 
 
 /* rocks */
