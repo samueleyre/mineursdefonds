@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+  color: orange;
+  //&:hover{
+  //  pointer-events: none;
+  //}
+}
+
+// parallax example : https://codepen.io/ferrouslights/pen/OpLVxG
+
+$Sky: #0D0221;
+$cloud: #fff;
+@mixin cloudShape {
+  z-index: 10;
+  background: $cloud;
+  position: absolute;
+  border-radius: 150px;
+  &:hover{
+    background-color: blue;
+  }
+}
+
+body {
+  #container {
+    margin: auto;
+    top: 10vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 90vw;
+    max-height: 80vh;
+    pointer-events: all;
+    //transform-origin: bottom;
+  }
+  .planet {
+    z-index: 1;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-size: cover;
+    position: absolute;
+    width: 70vw;
+    height: 70%;
+    border-radius: 150px;
+    overflow: hidden;
+  }
+  .cloud {
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    bottom: -75px;
+    left: 30px;
+
+    .puff {
+      @include cloudShape;
+      width: 90px;
+      height: 90px;
+      bottom: 10px;
+      right: 0px;
+    }
+    .puff2 {
+      @include cloudShape;
+      width: 120px;
+      height: 120px;
+      bottom: 10px;
+      right: 40px;
+    }
+    .puff3 {
+      @include cloudShape;
+      width: 100px;
+      height: 100px;
+      bottom: 10px;
+      right: 100px;
+    }
+    .puff4 {
+      @include cloudShape;
+      width: 90px;
+      height: 90px;
+      bottom: 10px;
+      right: 120px;
+    }
+    .puff5 {
+      @include cloudShape;
+      width: 80px;
+      height: 80px;
+      bottom: 50px;
+      right: 20px;
+    }
+  }
+  .cloud2 {
+    z-index: 9;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    bottom: 300px;
+    right: 300px;
+    .floof {
+      @include cloudShape;
+      width: 90px;
+      height: 90px;
+      top: 0px;
+      left: 30px;
+    }
+    .floof2 {
+      @include cloudShape;
+      width: 100px;
+      height: 100px;
+      top: 20px;
+      left: 30px;
+
+    }
+    .floof3 {
+      @include cloudShape;
+      width: 90px;
+      height: 90px;
+      top: 10px;
+      left: 80px;
+
+    }
+    .floof4 {
+      @include cloudShape;
+      width: 80px;
+      height: 80px;
+      top: 30px;
+      left: 0px;
+
+    }
+  }
+}

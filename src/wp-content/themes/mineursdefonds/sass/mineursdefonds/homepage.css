@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+svg {
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+    color: #0b0b0b;
+}
+body #container {
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: all;
+}
+body .planet {
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body .cloud {
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    bottom: -60%;
+    right: 40%;
+    transition: filter 3s;
+}
+
+body .cloud .puff {
+    z-index: 10;
+    background: #fff;
+    position: absolute;
+    border-radius: 150px;
+    width: 90px;
+    height: 90px;
+    transition: filter 3s;
+}
+.text {
+    opacity: 0;
+    transition: opacity 3s;
+    color: white;
+}
+
+body .cloud:hover {
+    -webkit-filter: saturate(8);
+    filter: saturate(8);
+    transition: filter 3s;
+}
+
+body .cloud:hover .text {
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+body .cloud2 {
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    bottom: 50%;
+    right: -30%;
+}
+
+body .cloud2 .floof {
+    z-index: 10;
+    background: #fff;
+    position: absolute;
+    border-radius: 150px;
+    width: 90px;
+    height: 90px;
+}
+
+body .cloud2:hover {
+    -webkit-filter: saturate(8);
+    filter: saturate(8);
+    transition: filter 3s;
+}
+
+body .cloud2:hover .text {
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+/* Exploration */
+.exploration {
+    visibility: hidden;
+}
+
+.exploration.exploration--mode {
+    visibility: visible;
+}
+
+
+/* Exploration link */
+.homepage-explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.homepage-explore > img, .homepage-explore > span {
+    cursor: pointer;
+}
+
+/* nav */
+.nav {
+    display: flex;
+}
+
+.nav-title {
+    margin: auto;
+    text-align: center;
+}
+
+.nav-title > .citation {
+    font-family: raleway-italic, sans-serif;
+}
+
+.nav-menu-icon > img {
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50px;
+}
+
+.nav-menu-icon--open > img {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+
+
+/* rocks */
+
+.homepage-left {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.homepage-left > img{
+    width: 600px;
+}
+
+.homepage-right {
+   display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.homepage-right img{
+    width: 547px;
+}
+
+
+
