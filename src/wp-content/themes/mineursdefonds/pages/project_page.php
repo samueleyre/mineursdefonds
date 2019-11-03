@@ -12,8 +12,10 @@
 <body <?php body_class(); ?> >
 
     <div class="projectPage">
-
-	    <?php
+        <header>
+	        <?php get_template_part( 'template-parts/header/mineursdefonds-menu' ); ?>
+        </header>
+        <?php
 	    if ( have_posts() ) {
 		    while ( have_posts() ) {
 			    the_post();
@@ -24,7 +26,7 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="entry-content">
                     <?php the_title( '<h1 class="projectPage-title">', '</h1>' ); ?>
-                    <?php the_content('<div class="test">', '</div>'); ?>
+                    <?php the_content('<div class="">', '</div>'); ?>
                 </div>
             </article>
         <?php
@@ -32,6 +34,9 @@
 	    }
 	    ?>
     </div>
+
+    <script src="<?php echo get_bloginfo( 'template_url' ) ?>/js/mineursdefonds/navigation.js"></script>
+
 
 </body>
 </html>

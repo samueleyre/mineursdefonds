@@ -1,0 +1,45 @@
+@import "menu";
+
+.eventsPage {
+    color: white;
+    &-title {
+        margin-bottom: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+    }
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(http://localhost:8000/wp-content/themes/mineursdefonds/images/wall.jpg);
+    background-size: cover;
+    .events-container{
+        padding: 10px;
+        border: solid;
+        border-radius: 4px;
+        border-width: 8px !important;
+        animation: ease;
+        border-color: transparent;
+        &:hover {
+            //background-color: rgb(255, 255, 255);
+            //color: rgba(50, 50, 50);
+            border-color: white;
+        }
+        display: flex;
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+        }
+        &-data {
+            &-title {
+
+            }
+            padding-left: 50px;
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+

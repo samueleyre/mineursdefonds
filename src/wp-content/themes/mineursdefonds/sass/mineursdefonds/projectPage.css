@@ -1,78 +1,132 @@
+.nav-menu {
+  position: fixed;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.nav-menu-icon > img {
+  margin: 10px;
+  margin-top: 0;
+  margin-left: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 50px;
+}
+.nav-menu-icon--open > img {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+.nav-menu-items {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s;
+}
+.nav-menu-items--open {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.nav-menu-items > .nav-menu-item {
+  margin: 5px;
+  margin-left: 0px;
+}
+
+.nav-menu {
+  z-index: 5;
+}
+
 .projectPage {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectPage-title {
-    margin-top: 40px;
-    text-align: center;
-    color: white;
+  margin-top: 40px;
+  text-align: center;
+  color: white;
 }
 
 .roche {
-    position: absolute;
-    background-size: cover;
-    left: 10%;
-    right: 10%;
-    height: 74vw;
-    margin-bottom: 10vw;
-    filter: opacity(0.8);
+  position: absolute;
+  background-size: cover;
+  left: 10%;
+  right: 10%;
+  height: 74vw;
+  margin-bottom: 10vw;
+  filter: opacity(0.8);
 }
 
 .roche_bg {
-    width: 100%;
-    position: absolute;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 84vw;
-    margin-bottom: 10vw;
-    filter: hue-rotate(-462deg);
+  width: 100%;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 84vw;
+  margin-bottom: 10vw;
+  filter: hue-rotate(-462deg);
 }
 
 .entry {
-    z-index: 1;
+  z-index: 1;
 }
 
 .entry-content {
-    padding-top: 24vw !important;
-    margin-left: 10% !important;
-    margin-right: 10% !important;
+  padding-top: 24vw !important;
+  margin-left: 10% !important;
+  margin-right: 10% !important;
 }
 
 .entry .entry-content > * {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
-.entry-content p:nth-child(2){
-    color: white;
-    font-size: 1.5vw;
-    width: 70%;
-    margin: auto;
-    margin-bottom: 24vw;
-    height: 32vw;
+.entry-content p:nth-child(2) {
+  color: white;
+  font-size: 1.5vw;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 24vw;
+  height: 32vw;
 }
 
 @media (min-width: 1400px) {
-    .roche {
-        left: 20%;
-        right: 20%;
-        height: 55vw;
-    }
+  .roche {
+    left: 20%;
+    right: 20%;
+    height: 55vw;
+  }
 
-    .roche_bg {
-        /* same as roche*/
-        height: 65vw;
-    }
+  .roche_bg {
+    /* same as roche*/
+    height: 65vw;
+  }
 
-    .entry-content {
-        padding-top: 12vw !important;
-        margin-left: 20% !important;
-        margin-right: 20% !important;
-    }
+  .entry-content {
+    padding-top: 12vw !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
 
-    .entry-content p:nth-child(2) {
-        height: 25vw;
-    }
+  .entry-content p:nth-child(2) {
+    height: 25vw;
+  }
+}
+@media (max-width: 1000px) {
+  .roche_bg {
+    display: none;
+  }
+
+  .projectPage-title {
+    color: black;
+  }
+
+  .entry-content p:nth-child(2) {
+    color: black;
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+  }
 }
 
+/*# sourceMappingURL=projectPage.css.map */

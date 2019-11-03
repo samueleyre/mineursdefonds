@@ -1,6 +1,4 @@
 let exploration = false;
-let menuActivated = false;
-
 
 /**
  * Special cursor for exploration
@@ -35,20 +33,6 @@ function explore() {
     const elements = document.getElementsByClassName('exploration');
     for (const e of elements) {
         e.classList.add('exploration--mode')
-    }
-}
-
-function rotate() {
-    document.getElementById('nav-menu-icon').classList.toggle('nav-menu-icon--open')
-}
-
-function activateMenu() {
-    rotate();
-    menuActivated = !menuActivated;
-    if (menuActivated) {
-        document.getElementById('nav-menu-items').classList.toggle('nav-menu-items--open')
-    } else {
-        document.getElementById('nav-menu-items').classList.toggle('nav-menu-items--open')
     }
 }
 

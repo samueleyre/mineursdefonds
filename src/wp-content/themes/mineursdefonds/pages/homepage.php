@@ -11,7 +11,7 @@
 </head>
 <body onmousemove="mouseMove(event)">
 
-<!--Exploration environment-->
+<!--Exploration environment -- hidden behind -->
 <div class="exploration" id="exploration" style="z-index: 1; position: absolute; cursor: none"
      data-pointer-events="true">
 
@@ -22,9 +22,11 @@
 
     <div class="layer roche roche_1" data-depth="3">
         <div>
-            <img src="<?php echo get_bloginfo( 'template_url' ) ?>/images/mini_roche_1.png" onclick="testClick()"
-                 alt="">
-            <span class="text">Madame ram dam</span>
+            <a href="<?php echo get_page_link(21); ?>">
+                <img src="<?php echo get_bloginfo( 'template_url' ) ?>/images/mini_roche_1.png" onclick="testClick()"
+                     alt="">
+                <span class="text">Madame ram dam</span>
+            </a>
         </div>
     </div>
 
@@ -38,7 +40,7 @@
     <radialGradient id="gradient" x2="1" y2="1">
         <stop offset="0%" stop-color="transparent"/>
         <stop offset="60%" stop-color="transparent"/>
-        <stop offset="90%" stop-color="white"/>
+        <stop offset="95%" stop-color="black"/>
         <stop offset="100%" stop-color="black"/>
     </radialGradient>
     <defs>
@@ -48,14 +50,13 @@
         </mask>
     </defs>
     <image width="120%" mask="url(#mask)"
-           xlink:href="<?php echo get_bloginfo( 'template_url' ) ?>/images/15.jpeg"></image>
+           xlink:href="<?php echo get_bloginfo( 'template_url' ) ?>/images/rideau.jpeg"></image>
     <circle id="circle-shadow" cx="831" cy="16" r="130"
-            style="fill: url(#gradient) transparent; stroke-width: 1;"></circle>
+            style="fill: url(#gradient) transparent; stroke-width: 68px; stroke: black;"></circle>
 </svg>
 
 
 <!--onload home page -->
-
 <header>
     <div class="nav">
         <div class="nav-title">
@@ -65,17 +66,7 @@
                 Artiste mineur de fond' <span class="author">C. Nougaro</span></i>
             </p>
         </div>
-        <div class="nav-menu">
-            <div id="nav-menu-icon" onclick="activateMenu()" class="nav-menu-icon">
-                <img type="svg" src="<?php echo get_bloginfo( 'template_url' ) ?>/images/noun_menu.svg" alt="">
-            </div>
-            <div id="nav-menu-items" class="nav-menu-items">
-                <div class="nav-menu-item"><a href="">Projets</a></div>
-                <div class="nav-menu-item"><a href="">Dates</a></div>
-                <div class="nav-menu-item"><a href="">Collectif</a></div>
-                <div class="nav-menu-item"><a href="">Contact</a></div>
-            </div>
-        </div>
+	    <?php get_template_part( 'template-parts/header/mineursdefonds-menu' ); ?>
     </div>
 </header>
 <section class="homepage">
@@ -129,6 +120,7 @@
 
 <script src="<?php echo get_bloginfo( 'template_url' ) ?>/js/mineursdefonds/librairies/parallax-js.3.1.0.min.js"></script>
 <script src="<?php echo get_bloginfo( 'template_url' ) ?>/js/mineursdefonds/homepage.js"></script>
+<script src="<?php echo get_bloginfo( 'template_url' ) ?>/js/mineursdefonds/navigation.js"></script>
 
 </body>
 </html>
