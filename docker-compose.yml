@@ -37,5 +37,11 @@ services:
      links:
        - db:db
 
+   composer:
+     image: composer
+     working_dir: /var/www/html
+     volumes:
+       - ./src:/var/www/html
+
 volumes:
     db_data: {}
