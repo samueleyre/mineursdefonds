@@ -24,10 +24,6 @@ function mouseMove(event) {
 
 }
 
-function testClick() {
-    console.log("click")
-}
-
 function explore() {
     exploration = true;
     const elements = document.getElementsByClassName('exploration');
