@@ -1,0 +1,29 @@
+{#
+/**
+ * Block Name: Rocher
+ *
+ */
+#}
+
+{#{% if is_preview %}#}
+{#    <p>I will only appear in the editor.</p>#}
+{#{% endif %}#}
+
+
+{# todo: add css file#}
+<link rel="stylesheet" href="{{ site.theme.link }}/block/assets/rocher.css">
+
+<div id="rocher" class="rocher" style="background-image: url('{{ site.theme.link }}/images/ampoule.jpeg');">
+    <div class="rocher-content" style="background-image: url('{{ site.theme.link }}/images/roche.png')">
+        <h1 class="rocher-title">{{ fields.title }}</h1>
+        <p>{{ fields.description }}</p>
+    </div>
+</div>
+<style type="text/css">
+    #rocher {
+        filter: hue-rotate(-462deg);
+        {#background-color: {{ fields.background_color }};#}
+    }
+
+</style>
+

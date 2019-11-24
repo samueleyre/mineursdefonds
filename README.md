@@ -1,8 +1,4 @@
-# SITE WEB pour les ateliers d'Ada
-
-[ateliersdada.lesbricodeurs.fr](ateliersdada.lesbricodeurs.fr)
-
-_Ateliers dédiés à l'apprentissage de la programmation pour les enfants et préadolescents, organisés par l'association LesBricodeurs_
+# SITE WEB pour les mineurs de fonds
 
 ## DEPENDANCES
 
@@ -32,5 +28,5 @@ make run
 
 Des questions ? 
 
-salut@lesbricodeurs.fr
+hello@samueleyre.com
 

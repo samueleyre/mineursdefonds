@@ -1,0 +1,15 @@
+/*
+ * Theme Name: MineurDeFonds
+ * Description: Theme MineurDeFonds
+ * Author: Samuel Eyre
+*/
+
+body{
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+@import "static/style/variables-site/variables-site";
+@import "static/style/mixins/mixins-master";
+@import "static/style/mixins/utilities";
+@import "static/style/blocks/blocks";

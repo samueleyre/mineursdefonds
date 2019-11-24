@@ -1,0 +1,191 @@
+
+body {
+  margin: 0;
+  //background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Exploration */
+.exploration {
+  visibility: hidden;
+  opacity: 0;
+
+}
+
+.exploration.exploration--mode {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#exploration {
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: all;
+}
+
+svg.exploration {
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+  color: #0b0b0b;
+}
+
+#exploration {
+  .fonds {
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(1.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .roche:hover {
+    -webkit-filter: invert(0.9);
+    filter: invert(0.9);
+    transition: filter 0.8s;
+  }
+  .roche:hover .text {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 0.7s;
+  }
+  .roche {
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    transition: filter 3s;
+    width: 200px;
+    height: 200px;
+    .text {
+      opacity: 0;
+      transition: opacity 3s;
+      color: white;
+      font-family: raleway-bold sans-serif;
+      font-weight: bold;
+    }
+    &-img {
+      width: 200px;
+      height: 200px;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .roche_1 {
+    bottom: -60%;
+    right: 40%;
+
+  }
+  .roche_2 {
+    bottom: 8%;
+    right: -30%;
+  }
+}
+
+
+/* Exploration link */
+.homepage-explore {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30%;
+  & > svg {
+    margin: 10px;
+    width: 90px;
+    height: auto;
+  }
+
+  & > svg .light-beam{
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  & > svg:hover .light-beam{
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  & > svg, .homepage-explore > span {
+    cursor: pointer;
+  }
+  @media( max-width: 1024px ) {
+    display: none;
+  }
+}
+
+
+
+/* nav */
+.nav {
+  display: flex;
+}
+
+.nav-title {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  h1 {
+    font-size: 60px;
+  }
+  & > .citation {
+    font-family: raleway-italic, sans-serif;
+    font-size: 24px;
+  }
+  .author {
+    margin-left: 15px;
+  }
+}
+
+@import "menu";
+
+
+/* rocks */
+
+.homepage-left {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.homepage-left > img{
+  width: 600px;
+}
+
+.homepage-right {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 542px;
+  height: 584px;
+  background-size: cover;
+  &-nextDate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    h4 {
+      font-size: 35px;
+    }
+  }
+}
+
+
+

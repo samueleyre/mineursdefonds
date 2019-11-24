@@ -1,0 +1,24 @@
+{% block html_head_container %}
+    {% include 'html-header.twig' %}
+    <link rel="stylesheet" href="{{ site.theme.link }}/static/style/events-page.css">
+    </head>
+{% endblock %}
+
+<body class="{{body_class}}">
+<div class="eventsPage" style="background-image: url('{{ site.theme.link }}/images/wall.jpg');">
+    <header>
+        {% include 'mdf-menu.twig' %}
+    </header>
+    {% for post in posts %}
+        <article id="post-{{post.ID}}" class="entry {{post.class}}">
+            <div class="entry-content">
+                <h1 class="eventsPage-title">{{ post.title }}</h1>
+                <div class="eventsPage-content">{{post.content}}</div>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+
+<script src="{{ site.theme.link }}/static/js/navigation.js"></script>
+</body>
+</html>
