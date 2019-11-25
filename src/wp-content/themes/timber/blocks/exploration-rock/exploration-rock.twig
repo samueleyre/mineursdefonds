@@ -1,0 +1,16 @@
+{#
+/**
+ * Block Name: HomeRock
+ *
+ */
+#}
+<link rel="stylesheet" href="{{ site.theme.link }}/blocks/exploration-rock/assets/exploration-rock.css">
+
+<div class="layer roche roche_{{ fields.rock_type }} roche_{{ fields.color }}" data-depth="1">
+    <a href="{{ fields.project_link }}">
+        <div class="roche-img" style="background-image: url('{{ site.theme.link }}/images/mini_roche_{{ fields.rock_type }}.png')">
+            <span class="text">{{ fields.title }}</span>
+        </div>
+    </a>
+</div>
+

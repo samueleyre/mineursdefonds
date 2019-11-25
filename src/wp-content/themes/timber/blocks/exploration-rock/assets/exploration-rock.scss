@@ -1,0 +1,51 @@
+
+.roche:hover .text {
+  opacity: 1;
+  transition: opacity 1s;
+  transition-delay: 0.7s;
+}
+.roche {
+  z-index: 10;
+  position: relative;
+  margin: auto;
+  transition: filter 3s;
+  width: 200px;
+  height: 200px;
+  a:link {
+    text-decoration: none;
+  }
+  .text {
+    opacity: 0;
+    transition: opacity 3s;
+    color: white;
+    font-family: raleway-bold sans-serif;
+    font-weight: bold;
+  }
+  &-img {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.roche:hover {
+  transition: filter 0.8s;
+  filter: invert(0.9);
+  -webkit-filter: invert(0.9);
+}
+
+.roche_brutus {
+  bottom: -60%;
+  right: 40%;
+
+}
+.roche_minus {
+  bottom: 8%;
+  right: -30%;
+}
+
+.roche_red {
+}

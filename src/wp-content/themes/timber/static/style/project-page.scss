@@ -8,31 +8,42 @@
   color: white;
 }
 
-.entry {
-    .entry-content {
-        .projectPage-content > * {
-            max-width: 100% !important;
-            margin-right: 5%;
-            margin-left: 5%;
-        }
-        .projectPage-content > div:first-of-type {
-          margin: 0;
-        }
-        figure.aligncenter{
-          margin: 0;
-          iframe {
-            width: 100%;
-            height: 100vh;
-          }
-        }
+.entry-content {
+    & > * {
+        max-width: 100% !important;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+    & > div:first-of-type {
+      margin: 0;
+    }
+    & > figure.aligncenter{
+      margin: 0;
+      iframe {
+        width: 100%;
+        height: 100vh;
+      }
     }
 }
 
 
 
-@media (min-width: 1400px) {
+@media (max-width: 1400px) {
+  .entry-content {
+    & > * {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
+  .entry-content {
+    & > * {
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+  }
+
 }
 

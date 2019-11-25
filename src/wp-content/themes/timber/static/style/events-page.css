@@ -65,28 +65,45 @@
 .eventsPage .eventsPage-content {
   display: flex;
   padding: 0 10%;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 .eventsPage .eventsPage-content .event {
-  padding: 10px;
+  padding: 20px;
   border: solid;
   border-radius: 4px;
   border-width: 8px !important;
   animation: ease;
   border-color: transparent;
+  width: 800px;
+  transition: 0.3s;
+  cursor: pointer;
   display: flex;
 }
 .eventsPage .eventsPage-content .event:hover {
-  border-color: white;
+  border-color: #dfbb13;
+  transition: 0.3s;
 }
 .eventsPage .eventsPage-content .event-image {
   border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 .eventsPage .eventsPage-content .event-content {
-  padding: 10px;
+  padding: 0 20px;
 }
 .eventsPage .eventsPage-content .event-content .event-title {
   margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+.eventsPage .eventsPage-content .event-content .event-date {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #dfbb13;
+}
+.eventsPage .eventsPage-content .event-content .event-location {
+  margin-bottom: 8px;
 }
 .eventsPage .eventsPage-content .event-content p {
   margin-top: 0;

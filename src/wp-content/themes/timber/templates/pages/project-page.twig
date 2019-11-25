@@ -10,9 +10,10 @@
                 {% include 'mdf-menu.twig' %}
             </header>
             {% for post in posts %}
-                <article id="post-{{post.ID}}" class="entry {{post.class}}">
+                <article id="post-{{post.ID}}" class="{{post.class}}">
                 <div class="entry-content">
-                    <div class="projectPage-content">{{post.content}}</div>
+                    {{post.content}}
+{#                    <div class="projectPage-content"></div>#}
                 </div>
                 </article>
             {% endfor %}

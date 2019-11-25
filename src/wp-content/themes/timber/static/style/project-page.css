@@ -48,20 +48,33 @@
   color: white;
 }
 
-.entry .entry-content .projectPage-content > * {
+.entry-content > * {
   max-width: 100% !important;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 20%;
+  margin-left: 20%;
 }
-.entry .entry-content .projectPage-content > div:first-of-type {
+.entry-content > div:first-of-type {
   margin: 0;
 }
-.entry .entry-content figure.aligncenter {
+.entry-content > figure.aligncenter {
   margin: 0;
 }
-.entry .entry-content figure.aligncenter iframe {
+.entry-content > figure.aligncenter iframe {
   width: 100%;
   height: 100vh;
+}
+
+@media (max-width: 1400px) {
+  .entry-content > * {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+@media (max-width: 1000px) {
+  .entry-content > * {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 
 /*# sourceMappingURL=project-page.css.map */

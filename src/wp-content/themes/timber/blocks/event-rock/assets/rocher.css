@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  transition: 0.3s;
 }
 #rocher .rocher-content {
   position: absolute;
@@ -29,6 +31,13 @@
   margin-top: 160px;
   text-align: center;
   color: white;
+}
+
+@media (max-width: 1400px) {
+  #rocher {
+    background-position-y: 0px;
+    transition: 0.3s;
+  }
 }
 
 /*# sourceMappingURL=rocher.css.map */

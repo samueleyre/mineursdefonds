@@ -184,6 +184,17 @@ function my_acf_init() {
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'rocher' ),
 	) );
+
+	// Register a new block.
+	acf_register_block( array(
+		'name'            => 'homerock',
+		'title'           => __( 'Rocher exploration', 'your-text-domain' ),
+		'description'     => __( 'Nom du groupe', 'your-text-domain' ),
+		'render_callback' => 'homerock_callback',
+		'category'        => 'formatting',
+		'icon'            => 'admin-comments',
+		'keywords'        => array( 'rocher' ),
+	) );
 }
 
 /**
@@ -206,15 +217,29 @@ function my_acf_block_render_callback( $block, $content = '', $is_preview = fals
 	$context['is_preview'] = $is_preview;
 
 	// Render the block.
-	Timber::render( 'block/rocher.twig', $context );
+	Timber::render( 'blocks/event-rock/rocher.twig', $context );
 }
 
-function my_acf_block_editor_style() {
-	wp_enqueue_style(
-		'rocher_css',
-		get_theme_root_uri() . '/block/assets/rocher.css'
-	);
+
+/**
+ *  This is the callback that displays the block.
+ *
+ * @param   array  $block      The block settings and attributes.
+ * @param   string $content    The block content (empty string).
+ * @param   bool   $is_preview True during AJAX preview.
+ */
+function homerock_callback( $block, $content = '', $is_preview = false ) {
+	$context = Timber::context();
+
+	// Store block values.
+	$context['block'] = $block;
+
+	// Store field values.
+	$context['fields'] = get_fields();
+
+	// Store $is_preview value.
+	$context['is_preview'] = $is_preview;
+
+	// Render the block.
+	Timber::render( 'blocks/exploration-rock/exploration-rock.twig', $context );
 }
-
-add_action( 'enqueue_block_assets', 'my_acf_block_editor_style' );
-

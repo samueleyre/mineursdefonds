@@ -5,13 +5,8 @@
  */
 #}
 
-{#{% if is_preview %}#}
-{#    <p>I will only appear in the editor.</p>#}
-{#{% endif %}#}
-
-
 {# todo: add css file#}
-<link rel="stylesheet" href="{{ site.theme.link }}/block/assets/rocher.css">
+<link rel="stylesheet" href="{{ site.theme.link }}/blocks/event-rock/assets/rocher.css">
 
 <div id="rocher" class="rocher" style="background-image: url('{{ site.theme.link }}/images/ampoule.jpeg');">
     <div class="rocher-content" style="background-image: url('{{ site.theme.link }}/images/roche.png')">
@@ -19,11 +14,16 @@
         <p>{{ fields.description }}</p>
     </div>
 </div>
+
 <style type="text/css">
     #rocher {
+    {% if fields.background_color == "red" %}
         filter: hue-rotate(-462deg);
-        {#background-color: {{ fields.background_color }};#}
+    {% elseif fields.background_color == "blue" %}
+        filter: hue-rotate(-200deg);
+    {% endif %}
     }
+
 
 </style>
 

@@ -45,47 +45,6 @@ svg.exploration {
   height: 100%;
   overflow: hidden;
 }
-#exploration .roche:hover {
-  -webkit-filter: invert(0.9);
-  filter: invert(0.9);
-  transition: filter 0.8s;
-}
-#exploration .roche:hover .text {
-  opacity: 1;
-  transition: opacity 1s;
-  transition-delay: 0.7s;
-}
-#exploration .roche {
-  z-index: 10;
-  position: relative;
-  margin: auto;
-  transition: filter 3s;
-  width: 200px;
-  height: 200px;
-}
-#exploration .roche .text {
-  opacity: 0;
-  transition: opacity 3s;
-  color: white;
-  font-family: raleway-bold sans-serif;
-  font-weight: bold;
-}
-#exploration .roche-img {
-  width: 200px;
-  height: 200px;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#exploration .roche_1 {
-  bottom: -60%;
-  right: 40%;
-}
-#exploration .roche_2 {
-  bottom: 8%;
-  right: -30%;
-}
 
 /* Exploration link */
 .homepage-explore {
@@ -97,16 +56,17 @@ svg.exploration {
 }
 .homepage-explore > svg {
   margin: 10px;
-  width: 90px;
+  width: 120px;
   height: auto;
 }
 .homepage-explore > svg .light-beam {
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s;
 }
 .homepage-explore > svg:hover .light-beam {
+  fill: #dfbb13 !important;
   opacity: 1;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s;
 }
 .homepage-explore > svg, .homepage-explore .homepage-explore > span {
   cursor: pointer;

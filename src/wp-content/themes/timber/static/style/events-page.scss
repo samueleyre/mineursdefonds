@@ -26,25 +26,42 @@
     .eventsPage-content {
         display: flex;
         padding: 0 10%;
-        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
         .event{
-            padding: 10px;
+            padding: 20px;
             border: solid;
             border-radius: 4px;
             border-width: 8px !important;
             animation: ease;
             border-color: transparent;
+            width: 800px;
+            transition: 0.3s;
+            cursor: pointer;
             &:hover {
-                border-color: white;
+                border-color: #dfbb13;
+                transition: 0.3s;
             }
             display: flex;
             &-image {
                 border-radius: 4px;
+                display: flex;
+                align-items: center;
             }
             &-content {
-                padding: 10px;
+                padding: 0 20px;
                 .event-title {
                     margin-top: 0;
+                    margin-bottom: 10px;
+                    font-size: 1.7em;
+                }
+                .event-date {
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    color: #dfbb13;
+                }
+                .event-location {
+                    margin-bottom: 8px;
                 }
                 p {
                     margin-top: 0;

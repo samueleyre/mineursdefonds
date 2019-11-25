@@ -512,7 +512,7 @@
 		}
 
 		.aligncenter {
-			
+
 			@include postContentMaxWidth();
 
 			@include media(tablet) {
