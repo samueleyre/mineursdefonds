@@ -1,7 +1,38 @@
 {% if menu %}
 	<div class="nav-menu">
 		<div id="nav-menu-icon" onclick="activateMenu()" class="nav-menu-icon">
-			<img type="svg" src="{{ site.theme.link }}/images/menu_mineurs.svg" alt="">
+{#			<img type="svg" src="{{ site.theme.link }}/images/menu_mineurs_2.svg" alt="">#}
+			<svg
+					width="36.011681mm"
+					height="14.363094mm"
+					viewBox="0 0 36.011681 14.363094"
+					>
+				<g
+						transform="translate(-58.021206,-120.43598)">
+					<g
+							transform="translate(45.595238,-139.33334)">
+						<circle
+								r="7.1815472"
+								cy="266.95087"
+								cx="30.238091"
+								id="path14"
+								style="stroke-width:0.26458332" />
+						<circle
+								r="2.6930804"
+								cy="267.09262"
+								cx="45.744568"
+								id="path14-3"
+								style="stroke-width:0.09921875" />
+						<circle
+								r="2.6930804"
+								cy="266.9509"
+								cx="15.119048"
+								id="path14-3-7"
+								style="stroke-width:0.09921875" />
+					</g>
+				</g>
+			</svg>
+
 		</div>
 		<div id="nav-menu-items" class="nav-menu-items">
 			{% for item in menu.get_items %}

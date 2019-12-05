@@ -4,6 +4,9 @@
 .nav-menu-items > .nav-menu-item a {
     color: white;
 }
+.nav-menu-icon > svg {
+    fill: white;
+}
 
 
 .eventsPage {
@@ -47,6 +50,7 @@
                 border-radius: 4px;
                 display: flex;
                 align-items: center;
+                border: solid 4px;
             }
             &-content {
                 padding: 0 20px;

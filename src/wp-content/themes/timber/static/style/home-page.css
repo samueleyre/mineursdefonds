@@ -55,9 +55,17 @@ svg.exploration {
   margin-top: 30%;
 }
 .homepage-explore > svg {
+  position: absolute;
+  z-index: 1;
   margin: 10px;
   width: 140px;
   height: auto;
+}
+.homepage-explore > span {
+  position: relative;
+  top: 66px;
+  left: 20px;
+  font-size: 21px;
 }
 .homepage-explore > svg .light-beam {
   opacity: 0;
@@ -105,15 +113,17 @@ svg.exploration {
   margin-top: 1rem;
   margin-left: 1rem;
 }
-.nav-menu-icon > img {
+.nav-menu-icon > svg, .nav-menu-icon > img {
   margin: 10px;
   margin-top: 0;
-  margin-left: 0;
+  margin-left: 8px;
   cursor: pointer;
   transition: 0.3s;
   width: 50px;
+  height: 50px;
+  fill: black;
 }
-.nav-menu-icon--open > img {
+.nav-menu-icon--open > svg, .nav-menu-icon--open > img {
   transform: rotate(90deg);
   transition: 0.3s;
 }
@@ -170,6 +180,10 @@ svg.exploration {
   -webkit-filter: drop-shadow(-10px -6px 0px #dfbb13) drop-shadow(14px 9px 0px #dfbb13);
   filter: drop-shadow(-10px -6px 0px #dfbb13) drop-shadow(14px 9px 0px #dfbb13);
 }
+.homepage-right:hover .homepage-right-event-image img {
+  border-color: #dfbb13;
+  transition: 0.3s;
+}
 .homepage-right-event {
   padding: 30px;
   margin-left: 50px;
@@ -200,6 +214,11 @@ svg.exploration {
   border-radius: 4px;
   display: flex;
   align-items: center;
+}
+.homepage-right-event-image img {
+  border: 5px solid white;
+  border-radius: 1px;
+  transition: 0.3s;
 }
 .homepage-right-event-content {
   padding: 0 20px;

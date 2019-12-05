@@ -3,15 +3,17 @@
   margin-top: 1rem;
   margin-left: 1rem;
 }
-.nav-menu-icon > img {
+.nav-menu-icon > svg, .nav-menu-icon > img {
   margin: 10px;
   margin-top: 0;
-  margin-left: 0;
+  margin-left: 8px;
   cursor: pointer;
   transition: 0.3s;
   width: 50px;
+  height: 50px;
+  fill: black;
 }
-.nav-menu-icon--open > img {
+.nav-menu-icon--open > svg, .nav-menu-icon--open > img {
   transform: rotate(90deg);
   transition: 0.3s;
 }
@@ -46,6 +48,10 @@
 
 .nav-menu-items > .nav-menu-item a {
   color: white;
+}
+
+.nav-menu-icon > svg {
+  fill: white;
 }
 
 .entry-content > * {

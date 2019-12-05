@@ -59,10 +59,19 @@ svg.exploration {
   align-items: center;
   margin-top: 30%;
   & > svg {
+    position: absolute;
+    z-index: 1;
     margin: 10px;
     width: 140px;
     height: auto;
   }
+  & > span {
+    position: relative;
+    top: 66px;
+    left: 20px;
+    font-size: 21px;
+  }
+
 
   & > svg .light-beam{
     opacity: 0;
@@ -137,6 +146,10 @@ svg.exploration {
     transition: 0.3s;
     -webkit-filter: drop-shadow(-10px -6px 0px #dfbb13) drop-shadow(14px 9px 0px #dfbb13);
     filter: drop-shadow(-10px -6px 0px #dfbb13) drop-shadow(14px 9px 0px #dfbb13);
+    .homepage-right-event-image img {
+      border-color: #dfbb13;
+      transition: 0.3s;
+    }
   }
   &-event {
     padding: 30px;
@@ -171,6 +184,11 @@ svg.exploration {
       border-radius: 4px;
       display: flex;
       align-items: center;
+      img {
+        border: 5px solid white;
+        border-radius: 1px;
+        transition: 0.3s;
+      }
     }
     &-content {
       padding: 0 20px;

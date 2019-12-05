@@ -1,0 +1,47 @@
+@import "menu";
+
+// change menu font color
+.nav-menu-items > .nav-menu-item a {
+    color: white;
+}
+.nav-menu-icon > svg {
+    fill: white;
+}
+
+
+.contactPage {
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    &-title {
+        margin-top: 100px;
+        margin-bottom: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 3em;
+        text-transform: uppercase;
+    }
+    &-content {
+        #nf-form-1-cont {
+            margin: auto;
+        }
+        .nf-form-content input[type=button].send-button{
+            background: black;
+            color: white;
+            transition: all .3s;
+            border: 1px solid white;
+            cursor: pointer;
+            &:hover {
+                background: white;
+                color: black;
+                transition: all .3s;
+            }
+        }
+    }
+
+}
+
