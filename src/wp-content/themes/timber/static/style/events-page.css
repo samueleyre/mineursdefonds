@@ -51,9 +51,10 @@
 }
 
 .eventsPage {
-  position: absolute;
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
   color: white;
-  height: 100%;
   width: 100%;
   min-height: 100vh;
   background-image: url(http://localhost:8000/wp-content/themes/mineursdefonds/images/wall.jpg);
