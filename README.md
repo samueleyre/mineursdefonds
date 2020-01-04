@@ -1,4 +1,4 @@
-# SITE WEB pour les mineurs de fonds
+# https://mineursdefond.fr/
 
 ## DEPENDANCES
 
