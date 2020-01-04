@@ -4,7 +4,7 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - db_data:/var/lib/mysql
+       - ./db:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -23,8 +23,8 @@ services:
      restart: always
      environment:
        WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
-       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
-       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+       WORDPRESS_DB_USER: ${MYSQL_USER}
+       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
        WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
        WORDPRESS_AUTH_KEY: ${WORDPRESS_AUTH_KEY}
        WORDPRESS_SECURE_AUTH_KEY: ${WORDPRESS_SECURE_AUTH_KEY}
