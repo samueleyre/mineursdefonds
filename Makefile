@@ -1,7 +1,7 @@
-install:
+build:
 	@docker-compose down
 	@docker-compose build --force-rm
-	@echo "Installation completed"
+	@echo "Docker built"
 
 run:
 	@docker-compose up -d

@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         '"3eEV 6,j2Gt86gG0W{HEfb )=!.Tu>fo#4wG6Q0?(00&;8QS6?2IBBPCzr(u|;-M\')";');
+define( 'SECURE_AUTH_KEY',  '"Vw35(?cz@6-@< XU|pcS4,1)||fYAufa6!KI1!bl43O:U0.ey!qi,df*u+Kk!G~d\')";');
+define( 'LOGGED_IN_KEY',    '"FuZ|Ev3>,M|z?328eO$fzYSh&& _:RQAI&opLNCFJ3obLCm7S$0&yX-Sg1|^X.q(\')";');
+define( 'NONCE_KEY',        '"JsJ#aE8U^>f}>7FzZS!k+;9HT&t[!82,z)uQrBJ_.-h6?u8/I[@ZB@+dUl+;tC?\')";');
+define( 'AUTH_SALT',        '"6KfRS ehUw#k{cE<y:/, -~hui({$5kL) L,(.dDj.FaONXPa<KiA9Omj9VAJ-=<\')";');
+define( 'SECURE_AUTH_SALT', '"eO>; ZT1KuX*5]=.mN-L!<t_abtMA-@|3mYz{n_J^55HT&lb1@7laPv5q5f<qt5<\')";');
+define( 'LOGGED_IN_SALT',   '"f}tx5l&WXBs7JV{Jp[.vll]oZ>6}.=?JZ`+ ;,#+q]yT!y)ZA#HJ!4bJmF{Y+cyi\')";');
+define( 'NONCE_SALT',       '"i_{Lgr>(UA@l!|J.$`rIq-PTo@^0Y 1n=+v3.6X+#(t6}+F*]5?s_+M-]4z<,+/p\')";');
 
 /**#@-*/
 
@@ -66,7 +66,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 $table_prefix = 'wp_';
 
 /**
- * For developers: WordPress debugging mode.
+ * For developers: WordPress debugging mode.-
  *
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
@@ -77,7 +77,7 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', getenv('WORDPRESS_DEBUG_MODE') );
 
 // If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
 // see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy

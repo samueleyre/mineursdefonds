@@ -7,10 +7,10 @@ services:
        - db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: somewordpress
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MYSQL_DATABASE: ${MYSQL_DATABASE}
+       MYSQL_USER: ${MYSQL_USER}
+       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
    wordpress:
      depends_on:
@@ -19,13 +19,22 @@ services:
      volumes:
        - ./src/:/var/www/html
      ports:
-       - "8000:80"
+       - "${WORDPRESS_PORT}:80"
      restart: always
      environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
-       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+       WORDPRESS_AUTH_KEY: ${WORDPRESS_AUTH_KEY}
+       WORDPRESS_SECURE_AUTH_KEY: ${WORDPRESS_SECURE_AUTH_KEY}
+       WORDPRESS_LOGGED_IN_KEY: ${WORDPRESS_LOGGED_IN_KEY}
+       WORDPRESS_NONCE_KEY: ${WORDPRESS_NONCE_KEY}
+       WORDPRESS_AUTH_SALT: ${WORDPRESS_AUTH_SALT}
+       WORDPRESS_SECURE_AUTH_SALT: ${WORDPRESS_SECURE_AUTH_SALT}
+       WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
+       WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
+       WORDPRESS_DEBUG_MODE: ${WORDPRESS_DEBUG_MODE}
 
    phpmyadmin:
      depends_on:
