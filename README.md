@@ -1,4 +1,4 @@
-# https://mineursdefond.fr/
+# [mineursdefond.fr](https://mineursdefond.fr)
 
 ## DEPENDANCES
 
