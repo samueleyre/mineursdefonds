@@ -45,3 +45,11 @@ Thumbs.db
 *.tar
 *.zip
 
+# specificaly for server
+awstats-icon
+awstats/
+awstatsicons
+icon/
+phpmyadmin/
+readme.html
+stats/
