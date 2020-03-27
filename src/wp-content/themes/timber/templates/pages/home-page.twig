@@ -8,14 +8,14 @@
     <link rel="shortcut icon" href="{{ site.theme.link }}/images/icons/favicon.ico" />
     {{function('wp_head')}}
 </head>
-<body onmousemove="mouseMove(event)">
+<body onmousemove="mouseMove(event)" style="background-image: url('{{ site.theme.link }}/images/fonds-accueil.jpeg')">
 
 <!--Exploration environment -- hidden behind -->
 <div class="exploration" id="exploration" style="z-index: 1; position: absolute; cursor: none"
      data-pointer-events="true">
 
     <div class="layer fonds" data-depth="0"
-         style="background-image: url('{{ site.theme.link }}/images/fonds_exploration_v2.jpg')">
+         style="background-image: url('{{ site.theme.link }}/images/fonds_exploration_v3.jpeg')">
 
     </div>
 
@@ -34,11 +34,11 @@
     <defs>
         <mask id="mask" x="0" y="0" width="100%" height="100%">
             <rect x="0" y="0" width="100%" height="100%" fill="#fff"></rect>
-            <circle id="circle-mask" r="200"></circle>
+            <circle id="circle-mask" r="300"></circle>
         </mask>
     </defs>
     <rect width="120%" mask="url(#mask)" ></rect>
-    <circle id="circle-shadow" cx="831" cy="16" r="200"
+    <circle id="circle-shadow" cx="831" cy="16" r="300"
             style="fill: url(#gradient) transparent; stroke-width: 68px; stroke: black;"></circle>
 </svg>
 
@@ -47,7 +47,7 @@
 <header>
     <div class="nav">
         <div class="nav-title">
-            <h1>Les Mineurs de fonds</h1>
+            <img class='nav-title-logo' src="{{ site.theme.link }}/images/logo-titre.png"/>
             <p class="citation"><i>'Un projecteur sur le front,
                 Comme au casque du mineur, <br>
                 Artiste mineur de fond' <span class="author">C. Nougaro</span></i>

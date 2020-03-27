@@ -1,3 +1,11 @@
+h1, h2, h3, h4, h5 {
+  font-family: Andale Mono, "sans-serif";
+}
+
+p, span {
+  font-family: Arial, "sans-serif";
+}
+
 .nav-menu {
   position: absolute;
   margin-top: 1rem;
@@ -57,7 +65,6 @@
   color: white;
   width: 100%;
   min-height: 100vh;
-  background-image: url(http://localhost:8000/wp-content/themes/mineursdefonds/images/wall.jpg);
   background-size: cover;
 }
 .eventsPage-title {
@@ -96,6 +103,8 @@
   display: flex;
   align-items: center;
   border: solid 4px;
+  width: 150px;
+  height: 150px;
 }
 .eventsPage .eventsPage-content .event-content {
   padding: 0 20px;

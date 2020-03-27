@@ -1,3 +1,4 @@
+@import "common/common";
 @import "menu";
 
 // change menu font color
@@ -16,7 +17,6 @@
     color: white;
     width: 100%;
     min-height: 100vh;
-    background-image: url(http://localhost:8000/wp-content/themes/mineursdefonds/images/wall.jpg);
     background-size: cover;
     &-title {
         margin-top: 100px;
@@ -52,6 +52,8 @@
                 display: flex;
                 align-items: center;
                 border: solid 4px;
+                width: 150px;
+                height: 150px;
             }
             &-content {
                 padding: 0 20px;
@@ -77,4 +79,5 @@
 
     }
 }
+
 

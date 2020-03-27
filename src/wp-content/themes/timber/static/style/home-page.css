@@ -1,5 +1,15 @@
+h1, h2, h3, h4, h5 {
+  font-family: Andale Mono, "sans-serif";
+}
+
+p, span {
+  font-family: Arial, "sans-serif";
+}
+
 body {
   margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -14,7 +24,7 @@ body {
 .exploration.exploration--mode {
   visibility: visible;
   opacity: 1;
-  /*transition: opacity 1s;*/
+  transition: opacity 1s;
 }
 
 #exploration {
@@ -52,20 +62,18 @@ svg.exploration {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 55vh;
 }
 .homepage-explore > svg {
-  position: absolute;
   z-index: 1;
   margin: 10px;
   width: 140px;
   height: auto;
 }
 .homepage-explore > span {
-  position: relative;
   top: 66px;
   left: 20px;
-  font-size: 21px;
+  font-size: 32px;
 }
 .homepage-explore > svg .light-beam {
   opacity: 0;
@@ -76,7 +84,7 @@ svg.exploration {
   opacity: 1;
   transition: opacity 0.3s;
 }
-.homepage-explore > svg, .homepage-explore .homepage-explore > span {
+.homepage-explore > svg, .homepage-explore > span {
   cursor: pointer;
 }
 @media (max-width: 1024px) {
@@ -89,7 +97,6 @@ svg.exploration {
 .nav {
   display: flex;
 }
-
 .nav-title {
   position: absolute;
   top: 70px;
@@ -97,8 +104,8 @@ svg.exploration {
   margin: auto;
   text-align: center;
 }
-.nav-title h1 {
-  font-size: 60px;
+.nav-title-logo {
+  width: 700px;
 }
 .nav-title > .citation {
   font-family: raleway-italic, sans-serif;
