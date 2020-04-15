@@ -17,12 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@master
- 
-    # Runs a single command using the runners shell
+    steps: 
     - name: Send code to server
       run: |
         echo Sending to server
-        sshpass -p "{{secrets.password}}" scp -P {{secrets.port}} -r {{secrets.user}}@{{secrets.host}}:{{secrets.remoteThemsPath}} src/wp-content/themes/timber 
+        sshpass -p '{{secrets.password}}' ssh -p {{secrets.port}} {{secrets.user}}@{{secrets.host}} "cd public_html/mineursdefond; git pull origin master"
