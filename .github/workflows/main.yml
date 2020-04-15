@@ -18,7 +18,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
-    - name: Send code to server
-      run: |
-        echo Sending to server
-        sshpass -p '{{secrets.password}}' ssh -p {{secrets.port}} {{secrets.user}}@{{secrets.host}} "cd public_html/mineursdefond; git pull origin master"
+    - name: Pull code on server
+      uses: appleboy/ssh-action@v0.0.7
+      with: 
+        host: ${{ secrets.host }}
+        username: ${{ secrets.user }}
+        password: ${{ secrets.password }}
+        port: ${{ secrets.port }}
+        script: cd public_html/mineursdefond; git pull origin master
