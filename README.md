@@ -18,12 +18,6 @@ make install
 make run
 
 
-## DEPLOIEMENT
-
-
-./deploy.sh [mot de passe]
-
-
 <hr>
 
 Des questions ? 

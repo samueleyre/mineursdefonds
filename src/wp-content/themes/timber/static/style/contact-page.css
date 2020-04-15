@@ -11,6 +11,17 @@ p, span {
   margin-top: 1rem;
   margin-left: 1rem;
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-icon {
+    height: 40px;
+  }
+}
 .nav-menu-icon > svg, .nav-menu-icon > img {
   margin: 10px;
   margin-top: 0;
@@ -20,6 +31,12 @@ p, span {
   width: 50px;
   height: 50px;
   fill: black;
+}
+@media (max-width: 768px) {
+  .nav-menu-icon > svg, .nav-menu-icon > img {
+    width: 40px;
+    height: 40px;
+  }
 }
 .nav-menu-icon--open > svg, .nav-menu-icon--open > img {
   transform: rotate(90deg);
@@ -32,6 +49,17 @@ p, span {
   flex-direction: column;
   transition: opacity 0.3s;
 }
+@media (max-width: 768px) {
+  .nav-menu-items {
+    margin-left: 17px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    position: relative;
+  }
+}
+.nav-menu-items:not(.nav-menu-items--open) a {
+  pointer-events: none;
+}
 .nav-menu-items--open {
   opacity: 1;
   transition: opacity 0.3s;
@@ -40,11 +68,21 @@ p, span {
   margin: 5px;
   margin-left: 0;
 }
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item {
+    margin-right: 16px;
+  }
+}
 .nav-menu-items > .nav-menu-item a {
   color: black;
   font-size: 1.3em;
   text-decoration: none;
   transition: opacity 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item a {
+    font-size: 1.1em;
+  }
 }
 .nav-menu-items > .nav-menu-item a:hover {
   opacity: 0.8;
