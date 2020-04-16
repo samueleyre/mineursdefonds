@@ -6,7 +6,7 @@
 #}
 <link rel="stylesheet" href="{{ site.theme.link }}/blocks/exploration-rock/assets/exploration-rock.css">
 
-<div class="layer roche roche_{{ block.id }} roche_{{ fields.rock_type }} roche_{{ fields.color }}" data-depth="1">
+<div class="layer roche roche_{{ block.id }} roche_{{ fields.rock_type }} roche_{{ fields.color }}" data-depth="{{ fields.depth }}">
     <a href="{{ fields.project_link }}">
         <div class="roche-img" style="background-image: url('{{ site.theme.link }}/images/mini_roche_{{ fields.rock_type }}.png')">
             <span class="text">{{ fields.title }}</span>
@@ -17,7 +17,7 @@
 <style>
     .roche_{{ block.id }} {
         bottom: {{ fields.position_bottom }}%;
-        right: {{ fields.position_right }}%;
+        right: {{ fields.position_right * -1 }}%;
     }
 
 </style>
