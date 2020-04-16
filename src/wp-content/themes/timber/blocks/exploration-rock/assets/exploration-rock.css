@@ -1,24 +1,27 @@
 .roche:hover .text {
   opacity: 1;
-  transition: opacity 1s;
-  transition-delay: 0.7s;
+  color: white;
+  transition: opacity 0.5s;
 }
 
 .roche {
   z-index: 10;
   position: relative;
   margin: auto;
-  transition: filter 3s;
+  transition: filter 0.5s;
+  filter: brightness(0);
   width: 200px;
   height: 200px;
+  text-align: center;
 }
 .roche a:link {
   text-decoration: none;
 }
 .roche .text {
   opacity: 0;
-  transition: opacity 3s;
-  color: white;
+  width: 60%;
+  transition: opacity 0.5s;
+  color: #dedede;
   font-family: raleway-bold sans-serif;
   font-weight: bold;
 }
@@ -32,9 +35,9 @@
 }
 
 .roche:hover {
-  transition: filter 0.8s;
-  filter: invert(0.9);
-  -webkit-filter: invert(0.9);
+  transition: filter 0.5s;
+  filter: brightness(1.5);
+  -webkit-filter: brightness(1.5);
 }
 
 .roche_brutus {
