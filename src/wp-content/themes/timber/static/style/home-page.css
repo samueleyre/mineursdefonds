@@ -231,7 +231,8 @@ svg.exploration {
   left: 0;
 }
 .homepage-left > img {
-  width: 600px;
+  transition: 1s;
+  width: 500px;
 }
 @media (max-width: 1379px) {
   .homepage-left > img {
@@ -254,7 +255,6 @@ svg.exploration {
   width: 542px;
   bottom: 0;
   max-width: 100%;
-  height: 584px;
   max-height: 60%;
   background-repeat: no-repeat;
   transition: 0.3s;
@@ -262,24 +262,20 @@ svg.exploration {
 }
 @media (min-width: 600px) {
   .homepage-right {
-    background-position-y: -16px;
     background-size: 164%;
     right: 0;
   }
 }
-@media (max-width: 1379px) {
+@media (min-width: 600px) and (max-width: 1379px) {
   .homepage-right {
-    background-position-y: 39px;
-    background-size: 116%;
+    background-size: 145%;
     width: 481px;
-    background-position-x: 89px;
   }
 }
-@media (max-width: 1168px) {
+@media (min-width: 600px) and (max-width: 1168px) {
   .homepage-right {
-    background-position-y: 39px;
-    background-size: 127%;
-    background-position-x: 89px;
+    background-size: 144%;
+    width: 410px;
   }
 }
 @media (max-width: 600px) {
@@ -334,9 +330,14 @@ svg.exploration {
     padding: 117px 20px 20px 115px;
   }
 }
-@media (max-width: 1379px) {
+@media (min-width: 600px) and (max-width: 1379px) {
   .homepage-right-event-container {
-    padding: 117px 10px 20px 115px;
+    padding: 117px 0px 20px 115px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1168px) {
+  .homepage-right-event-container {
+    padding: 117px 0px 20px 56px;
   }
 }
 @media (max-width: 600px) {
@@ -345,7 +346,7 @@ svg.exploration {
   }
 }
 .homepage-right-event-container h2 {
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   text-align: center;
 }
