@@ -169,25 +169,20 @@ svg.exploration {
   position: fixed;
   width: 542px;
   @media( min-width: $mobile_width ) {
-    //background-position-y: -16px;
     background-size: 164%;
     right: 0;
     @media( max-width: $wide_width ) {
-      //background-position-y: 39px;
       background-size: 145%;
       width: 481px;
-      //background-position-x: 56px;
     }
     @media( max-width: $desktop_width ) {
-      //background-position-y: -5px;
       background-size: 144%;
       width: 410px;
-      //background-position-x: 9px;
     }
   }
   @media( max-width: $mobile_width ) {
     background-position-x: center;
-    background-position-y: 27px;
+    height: 298px;
   }
 
   bottom: 0;

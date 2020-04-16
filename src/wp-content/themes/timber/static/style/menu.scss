@@ -10,6 +10,7 @@
     }
 
     &-icon {
+        -webkit-tap-highlight-color: transparent;
         @media( max-width: $tablet_width ) {
             height: 40px;
         }

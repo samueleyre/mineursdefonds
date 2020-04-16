@@ -152,6 +152,9 @@ svg.exploration {
     align-items: center;
   }
 }
+.nav-menu-icon {
+  -webkit-tap-highlight-color: transparent;
+}
 @media (max-width: 768px) {
   .nav-menu-icon {
     height: 40px;
@@ -281,7 +284,7 @@ svg.exploration {
 @media (max-width: 600px) {
   .homepage-right {
     background-position-x: center;
-    background-position-y: 27px;
+    height: 298px;
   }
 }
 .homepage-right:hover {

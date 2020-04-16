@@ -17,6 +17,9 @@ p, span {
     align-items: center;
   }
 }
+.nav-menu-icon {
+  -webkit-tap-highlight-color: transparent;
+}
 @media (max-width: 768px) {
   .nav-menu-icon {
     height: 40px;
