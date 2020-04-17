@@ -45,19 +45,7 @@ Thumbs.db
 *.tar
 *.zip
 
-# specificaly for server
-awstats-icon
-awstats/
-awstatsicons
-icon/
-phpmyadmin/
-readme.html
-stats/
-uploads/2020
-uploads/2021
-uploads/2022
-uploads/2023
-uploads/2024
-uploads/2025
-uploads/2026
-uploads/2027
+# upoaded images on server
+wp-content/uploads/20*
+
+

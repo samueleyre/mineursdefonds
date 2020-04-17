@@ -7,11 +7,10 @@
 
 {# todo: add css file#}
 <link rel="stylesheet" href="{{ site.theme.link }}/blocks/event-rock/assets/rocher.css">
-
-<div id="rocher" class="rocher" style="background-image: url('{{ site.theme.link }}/images/ampoule.jpeg');">
-    <div class="rocher-content" style="background-image: url('{{ site.theme.link }}/images/roche.png')">
-        <h1 class="rocher-title">{{ fields.title }}</h1>
-        <p>{{ fields.description }}</p>
+<div id="rocher" class="rocher" style="background-image: url('{{ fields.background_image }}');">
+    <div class="rocher-content" style="background-image: url('{{ site.theme.link }}/images/projectPage-rock.png')">
+        <h1 class="rocher-content-title">{{ fields.title }}</h1>
+        <p class="rocher-content-text">{{ fields.description }}</p>
     </div>
 </div>
 
