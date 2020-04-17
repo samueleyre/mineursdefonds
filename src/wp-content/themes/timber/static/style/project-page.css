@@ -104,14 +104,6 @@ p, span {
   z-index: 5;
 }
 
-.nav-menu-items > .nav-menu-item a {
-  color: white;
-}
-
-.nav-menu-icon > svg {
-  fill: white;
-}
-
 .entry-content > * {
   max-width: 100% !important;
   margin-right: 20%;

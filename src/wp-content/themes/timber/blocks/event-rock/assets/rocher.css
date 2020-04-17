@@ -49,9 +49,14 @@
   }
 }
 #rocher .rocher-content-text {
+  text-align: center;
   color: white;
   font-size: 20px;
-  text-align: justify;
+}
+@media (max-width: 600px) {
+  #rocher .rocher-content-text {
+    text-align: justify;
+  }
 }
 #rocher .rocher-content-title {
   font-size: 40px;

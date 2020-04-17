@@ -17,12 +17,18 @@
 <style type="text/css">
     #rocher {
     {% if fields.background_color == "red" %}
-        filter: hue-rotate(-462deg);
+        /*filter: hue-rotate(-462deg);*/
     {% elseif fields.background_color == "blue" %}
-        filter: hue-rotate(-200deg);
+        /*filter: hue-rotate(-200deg);*/
     {% endif %}
     }
-
-
+    {% if fields.whiteMenu == true %}
+    .nav-menu-items > .nav-menu-item a {
+        color: white;
+    }
+    .nav-menu-icon > svg {
+        fill: white;
+    }
+    {% endif %}
 </style>
 

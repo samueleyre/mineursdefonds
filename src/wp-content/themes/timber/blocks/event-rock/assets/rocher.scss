@@ -42,9 +42,12 @@
         }
       }
       &-text {
+        text-align: center;
+        @media( max-width: $mobile_width ) {
+          text-align: justify;
+        }
         color: white;
         font-size: 20px;
-        text-align: justify;
       }
       &-title {
         font-size: 40px;
