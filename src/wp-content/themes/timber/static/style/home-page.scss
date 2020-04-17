@@ -1,11 +1,14 @@
 @import "common/common";
 @import "variables-site/structure";
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   overflow: hidden;
 }
 
