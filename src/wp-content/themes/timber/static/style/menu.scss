@@ -8,7 +8,6 @@
         display: flex;
         align-items: center;
     }
-
     &-icon {
         -webkit-tap-highlight-color: transparent;
         @media( max-width: $tablet_width ) {
@@ -69,6 +68,11 @@
                 }
                 text-decoration: none;
                 transition: opacity 0.3s;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
             }
             a:hover {
                 opacity: 0.8;

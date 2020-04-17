@@ -216,6 +216,15 @@ svg.exploration {
   font-size: 1.3em;
   text-decoration: none;
   transition: opacity 0.3s;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 @media (max-width: 768px) {
   .nav-menu-items > .nav-menu-item a {

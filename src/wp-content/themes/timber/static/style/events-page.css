@@ -81,6 +81,15 @@ p, span {
   font-size: 1.3em;
   text-decoration: none;
   transition: opacity 0.3s;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 @media (max-width: 768px) {
   .nav-menu-items > .nav-menu-item a {
@@ -141,23 +150,25 @@ p, span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .eventsPage .eventsPage-content .event:hover {
   border-color: #dfbb13;
   transition: 0.3s;
 }
-.eventsPage .eventsPage-content .event-image {
+.eventsPage .eventsPage-content .event > img, .eventsPage .eventsPage-content .event-content {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.eventsPage .eventsPage-content .event > img {
   border-radius: 4px;
-  display: flex;
-  align-items: center;
   border: solid 4px;
   width: 150px;
   height: 150px;
-  margin-bottom: 25px;
 }
 .eventsPage .eventsPage-content .event-content {
   max-width: 600px;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
 }
 @media (max-width: 1168px) {
   .eventsPage .eventsPage-content .event-content {
