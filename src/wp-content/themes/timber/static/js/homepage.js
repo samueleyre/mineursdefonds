@@ -27,7 +27,9 @@ function mouseMove(event) {
 function explore() {
     exploration = true;
     document.getElementsByClassName('homepage')[0].style.display = 'none';
+    document.getElementsByClassName('nav-title')[0].style.display = 'none';
     document.getElementsByTagName('body')[0].style.backgroundImage = 'none';
+    document.getElementsByTagName('body')[0].style.background = 'black';
     const elements = document.getElementsByClassName('exploration');
     for (const e of elements) {
         e.classList.add('exploration--mode')
