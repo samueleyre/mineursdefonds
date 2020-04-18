@@ -36,13 +36,32 @@
 			</svg>
 
 		</div>
-		<div id="nav-menu-items" class="nav-menu-items">
-			{% for item in menu.get_items %}
-				{%  if item.current is same as (false) %}
-					<div class="nav-menu-item"><a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-					</div>
-				{% endif %}
-			{% endfor %}
+		<div id="nav-menu-items-wrapper" class="nav-menu-items-wrapper">
+			<div id="nav-menu-main-items" class="nav-menu-main-items nav-menu-main-items--open nav-menu-items">
+				{% for item in menu.get_items %}
+					{%  if item.current is same as (false) %}
+						{%  if item.children|length > 0 %}
+							<div class="nav-menu-item"><a href="#" onclick="toggleSubMenu()">{{ item.title }} <span class="dashicons dashicons-arrow-right-alt2"></span></a>
+							</div>
+						{% else %}
+							<div class="nav-menu-item"><a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+							</div>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+			<div id="nav-menu-sub-items" class="nav-menu-sub-items nav-menu-items">
+				{% for item in menu.get_items %}
+					{%  if item.children|length > 0 %}
+						{% for subItem in item.children %}
+							<div class="nav-menu-item"><a target="{{ subItem.target }}" href="{{ subItem.link }}">{{ subItem.title }}</a>
+							</div>
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+				<div class="nav-menu-item"><a href="#" onclick="toggleSubMenu()"><span class="dashicons dashicons-arrow-left-alt2"></span> Retour</a>
+				</div>
+			</div>
 		</div>
 	</div>
 {% endif %}
