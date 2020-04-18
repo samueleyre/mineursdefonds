@@ -8,7 +8,7 @@
 {# todo: add css file#}
 <link rel="stylesheet" href="{{ site.theme.link }}/blocks/event-rock/assets/rocher.css">
 <div id="rocher" class="rocher" style="background-image: url('{{ fields.background_image }}');">
-    <div class="rocher-content" style="background-image: url('{{ site.theme.link }}/images/projectPage-rock.png')">
+    <div class="rocher-content">
         <h1 class="rocher-content-title">{{ fields.title }}</h1>
         <p class="rocher-content-text">{{ fields.description }}</p>
     </div>
@@ -23,12 +23,32 @@
     {% endif %}
     }
     {% if fields.whiteMenu == true %}
-    .nav-menu-items > .nav-menu-item a {
-        color: white;
-    }
-    .nav-menu-icon > svg {
-        fill: white;
+    @media (min-width: 600px) {
+        .nav-menu-items > .nav-menu-item a {
+            color: white;
+        }
+        .nav-menu-icon > svg {
+            fill: white;
+
+        }
     }
     {% endif %}
+
+
+    .rocher-content {
+        background-image: url('{{ site.theme.link }}/images/projectPage-rock.png');
+    }
+    @media (max-width: 600px) {
+        .rocher-content {
+            background-image: url('{{ site.theme.link }}/images/wall-600px.jpg');
+        }
+        .nav-menu-items > .nav-menu-item a {
+            color: white;
+        }
+        .nav-menu-icon > svg {
+            fill: white;
+        }
+    }
+
 </style>
 

@@ -8,13 +8,13 @@ p, span {
 
 .nav-menu {
   position: absolute;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 14px;
+  padding-left: 14px;
+  max-width: 100%;
 }
 @media (max-width: 768px) {
   .nav-menu {
     display: flex;
-    align-items: center;
   }
 }
 .nav-menu-icon {
@@ -50,18 +50,23 @@ p, span {
   position: absolute;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.3s, left 0.3s;
+  transition: opacity 0.3s, left 0.3s, top 0.3s;
 }
 .nav-menu-items-wrapper {
   opacity: 0;
   transition: opacity 0.3s;
 }
 @media (max-width: 768px) {
+  .nav-menu-items-wrapper {
+    margin-top: 3px;
+  }
+}
+@media (max-width: 768px) {
   .nav-menu-items {
-    margin-left: 17px;
     margin-bottom: 5px;
     flex-direction: row;
-    position: relative;
+    max-width: calc(100vw - 85px);
+    overflow-x: auto;
   }
 }
 .nav-menu-items > .nav-menu-item {
@@ -98,24 +103,60 @@ p, span {
 .nav-menu-items > .nav-menu-item a:hover {
   opacity: 0.8;
 }
-.nav-menu-sub-items {
-  left: 80px;
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item .dashicons-arrow-left-alt2, .nav-menu-items > .nav-menu-item .dashicons-arrow-right-alt2 {
+    transform: rotate(90deg);
+  }
 }
 .nav-menu-sub-items:not(.nav-menu-sub-items--open) a {
   pointer-events: none;
 }
-.nav-menu-sub-items--open {
-  left: 0;
+@media (min-width: 768px) {
+  .nav-menu-sub-items:not(.nav-menu-sub-items--open) {
+    left: 120px;
+  }
 }
-.nav-menu-main-item:not(.nav-menu-main-items--open) a {
+@media (max-width: 768px) {
+  .nav-menu-sub-items:not(.nav-menu-sub-items--open) {
+    top: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu-sub-items--open {
+    left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-sub-items--open {
+    top: 5px;
+  }
+}
+.nav-menu-main-items:not(.nav-menu-main-items--open) a {
   pointer-events: none;
 }
-.nav-menu-main-item--open {
-  left: -80px;
+@media (min-width: 768px) {
+  .nav-menu-main-items:not(.nav-menu-main-items--open) {
+    left: -35px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-main-items:not(.nav-menu-main-items--open) {
+    top: -40px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu-main-items--open {
+    left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-main-items--open {
+    top: 5px;
+  }
 }
 .nav-menu-main-items--open, .nav-menu-sub-items--open, .nav-menu-items-wrapper--open {
   opacity: 1;
-  transition: opacity 0.3s, left 0.3s;
+  transition: opacity 0.3s, left 0.3s, top 0.3s;
 }
 
 .nav-menu {

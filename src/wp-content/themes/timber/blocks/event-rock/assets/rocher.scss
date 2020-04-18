@@ -23,6 +23,7 @@
         background-position: top;
         background-size: cover;
         max-width: 100%;
+        padding-top: 150px;
       }
       @media( min-width: $mobile_width ) {
         background-position: center;
@@ -43,11 +44,12 @@
       }
       &-text {
         text-align: center;
+        font-size: 20px;
         @media( max-width: $mobile_width ) {
           text-align: justify;
+          font-size: 14px;
         }
         color: white;
-        font-size: 20px;
       }
       &-title {
         font-size: 40px;
