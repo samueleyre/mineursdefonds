@@ -228,6 +228,7 @@ svg.exploration {
   font-size: 1.3em;
   text-decoration: none;
   transition: opacity 0.3s;
+  white-space: nowrap;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
