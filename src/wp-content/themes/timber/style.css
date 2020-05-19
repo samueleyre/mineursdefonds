@@ -9,6 +9,14 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: Andale Mono, "sans-serif";
+}
+
+p, span, a {
+  font-family: Arial, "sans-serif";
+}
+
 /*
  * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
  * This results in a jumping cursor when typing in both the Classic and block
