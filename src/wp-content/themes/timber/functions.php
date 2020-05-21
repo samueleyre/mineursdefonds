@@ -243,3 +243,13 @@ function homerock_callback( $block, $content = '', $is_preview = false ) {
 	// Render the block.
 	Timber::render( 'blocks/exploration-rock/exploration-rock.twig', $context );
 }
+
+add_action( 'wp_enqueue_scripts', 'enqueue_dashicons_frontend' );
+/**
+ * Enqueue Dashicons style for frontend use */
+function enqueue_dashicons_frontend()
+{
+    if (!is_admin()) {
+        wp_enqueue_style('dashicons');
+    }
+}

@@ -20,5 +20,12 @@
         </div>
 
     <script src="{{ site.theme.link }}/static/js/navigation.js"></script>
+    {% block footer %}
+        <footer id="footer">
+            {% include 'footer.twig' %}
+        </footer>
+        {{ function('wp_footer') }}
+    {% endblock %}
     </body>
 </html>
+

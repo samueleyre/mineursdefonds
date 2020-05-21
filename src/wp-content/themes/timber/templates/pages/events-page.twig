@@ -21,5 +21,11 @@
 
 <script src="{{ site.theme.link }}/static/js/navigation.js"></script>
 <script src="{{ site.theme.link }}/static/js/events-page.js"></script>
+{% block footer %}
+    <footer id="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}
 </body>
 </html>

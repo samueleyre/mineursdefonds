@@ -76,16 +76,17 @@
                 -moz-user-select: none; /* Old versions of Firefox */
                 -ms-user-select: none; /* Internet Explorer/Edge */
                 user-select: none;
-            }
-            a:hover {
-                opacity: 0.8;
-
-            }
-            .dashicons-arrow-left-alt2, .dashicons-arrow-right-alt2 {
-                @media( max-width: $tablet_width ) {
-                    transform: rotate(90deg);
+                &:hover {
+                    opacity: 0.8;
+                }
+                .dashicons-arrow-left-alt2, .dashicons-arrow-right-alt2 {
+                    @media( max-width: $tablet_width ) {
+                        transform: rotate(90deg);
+                    }
                 }
             }
+
+
         }
     }
     &-sub-items {

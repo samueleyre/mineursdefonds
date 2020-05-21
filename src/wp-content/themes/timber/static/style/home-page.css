@@ -248,7 +248,7 @@ svg.exploration {
   opacity: 0.8;
 }
 @media (max-width: 768px) {
-  .nav-menu-items > .nav-menu-item .dashicons-arrow-left-alt2, .nav-menu-items > .nav-menu-item .dashicons-arrow-right-alt2 {
+  .nav-menu-items > .nav-menu-item a .dashicons-arrow-left-alt2, .nav-menu-items > .nav-menu-item a .dashicons-arrow-right-alt2 {
     transform: rotate(90deg);
   }
 }

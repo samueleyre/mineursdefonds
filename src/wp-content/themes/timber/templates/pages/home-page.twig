@@ -168,6 +168,12 @@
 <script src="{{ site.theme.link }}/static/js/librairies/parallax-js.3.1.0.min.js"></script>
 <script src="{{ site.theme.link }}/static/js/homepage.js"></script>
 <script src="{{ site.theme.link }}/static/js/navigation.js"></script>
-
+{% block footer %}
+    <footer id="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}
 </body>
 </html>
+
