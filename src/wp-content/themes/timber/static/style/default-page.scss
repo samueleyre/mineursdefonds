@@ -1,0 +1,39 @@
+@import "common/common";
+@import "menu";
+
+// change menu font color
+.nav-menu-items > .nav-menu-item a {
+    color: white;
+}
+.nav-menu-icon > svg {
+    fill: white;
+}
+
+
+.defaultPage {
+    position: fixed;
+    color: white;
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    background-size: cover;
+    &-title {
+        margin-top: 150px;
+        margin-bottom: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        font-size: 3em;
+        text-transform: uppercase;
+    }
+    &-content {
+        max-width: 100% !important;
+        margin-right: 20%;
+        margin-left: 20%;
+        & > * {
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+    }
+}
+

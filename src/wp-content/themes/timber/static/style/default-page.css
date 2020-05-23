@@ -1,0 +1,198 @@
+h1, h2, h3, h4, h5 {
+  font-family: Andale Mono, "sans-serif";
+}
+
+p, span, a {
+  font-family: Arial, "sans-serif";
+}
+
+.nav-menu {
+  position: absolute;
+  margin-top: 14px;
+  padding-left: 14px;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+.nav-menu-icon {
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 768px) {
+  .nav-menu-icon {
+    height: 40px;
+  }
+}
+.nav-menu-icon > svg, .nav-menu-icon > img {
+  margin: 10px;
+  margin-top: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 50px;
+  height: 50px;
+  fill: black;
+}
+@media (max-width: 768px) {
+  .nav-menu-icon > svg, .nav-menu-icon > img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.nav-menu-icon--open > svg, .nav-menu-icon--open > img {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+.nav-menu-items {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s, left 0.3s, top 0.3s;
+}
+.nav-menu-items-wrapper {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-menu-items-wrapper {
+    margin-top: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-items {
+    margin-bottom: 5px;
+    flex-direction: row;
+    max-width: calc(100vw - 85px);
+    overflow-x: auto;
+  }
+}
+.nav-menu-items > .nav-menu-item {
+  margin: 5px;
+  margin-left: 0;
+}
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item {
+    margin-right: 16px;
+  }
+}
+.nav-menu-items > .nav-menu-item a {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 1.3em;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item a {
+    font-size: 1.1em;
+  }
+}
+.nav-menu-items > .nav-menu-item a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .nav-menu-items > .nav-menu-item a .dashicons-arrow-left-alt2, .nav-menu-items > .nav-menu-item a .dashicons-arrow-right-alt2 {
+    transform: rotate(90deg);
+  }
+}
+.nav-menu-sub-items:not(.nav-menu-sub-items--open) a {
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .nav-menu-sub-items:not(.nav-menu-sub-items--open) {
+    left: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-sub-items:not(.nav-menu-sub-items--open) {
+    top: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu-sub-items--open {
+    left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-sub-items--open {
+    top: 5px;
+  }
+}
+.nav-menu-main-items:not(.nav-menu-main-items--open) a {
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .nav-menu-main-items:not(.nav-menu-main-items--open) {
+    left: -35px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-main-items:not(.nav-menu-main-items--open) {
+    top: -40px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu-main-items--open {
+    left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu-main-items--open {
+    top: 5px;
+  }
+}
+.nav-menu-main-items--open, .nav-menu-sub-items--open, .nav-menu-items-wrapper--open {
+  opacity: 1;
+  transition: opacity 0.3s, left 0.3s, top 0.3s;
+}
+
+.nav-menu-items > .nav-menu-item a {
+  color: white;
+}
+
+.nav-menu-icon > svg {
+  fill: white;
+}
+
+.defaultPage {
+  position: fixed;
+  color: white;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  background-size: cover;
+}
+.defaultPage-title {
+  margin-top: 150px;
+  margin-bottom: 50px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.defaultPage-content {
+  max-width: 100% !important;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+.defaultPage-content > * {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/*# sourceMappingURL=default-page.css.map */
