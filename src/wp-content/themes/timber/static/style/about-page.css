@@ -178,12 +178,19 @@ p, span, a {
 }
 .aboutPage-title {
   margin-top: 150px;
-  margin-bottom: 100px !important;
+  margin-bottom: 50px !important;
   width: 100% !important;
   max-width: 100% !important;
   text-align: center;
   font-size: 3em;
   text-transform: uppercase;
+}
+.aboutPage-menu a {
+  text-decoration: none !important;
+  color: white;
+}
+.aboutPage-menu a:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 .aboutPage-content {
   max-width: 100% !important;
