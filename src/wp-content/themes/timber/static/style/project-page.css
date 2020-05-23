@@ -6,6 +6,10 @@ p, span, a {
   font-family: Arial, "sans-serif";
 }
 
+.center {
+  text-align: center;
+}
+
 .nav-menu {
   position: absolute;
   margin-top: 14px;
