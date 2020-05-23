@@ -129,4 +129,9 @@
 	}
 }
 
+@mixin title() {
+	margin-top: 100px;
+	margin-bottom: 50px !important;
+}
+
 @import "utilities";

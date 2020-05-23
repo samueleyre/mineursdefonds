@@ -1,4 +1,6 @@
 @import "common/common";
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
 @import "menu";
 
 // change menu font color
@@ -19,8 +21,7 @@
     min-height: 100vh;
     background-size: cover;
     &-title {
-        margin-top: 100px;
-        margin-bottom: 50px !important;
+        @include title();
         width: 100% !important;
         max-width: 100% !important;
         text-align: center;
