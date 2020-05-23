@@ -19,7 +19,7 @@
         bottom: {{ fields.position_bottom }}%;
         right: {{ fields.position_right * -1 }}%;
     }
-    .roche-img {
+    .roche_{{ block.id }} .roche-img {
         background-image: url('{{ site.theme.link }}/images/mini_roche_{{ fields.rock_type }}.png');
     }
     @media (max-width: 600px) {
