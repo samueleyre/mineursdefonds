@@ -21,6 +21,7 @@
     background-size: cover;
     &-title {
         @include title();
+        margin-top: 300px;
         width: 100% !important;
         max-width: 100% !important;
         text-align: center;
