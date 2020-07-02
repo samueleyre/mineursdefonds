@@ -10,6 +10,10 @@ p, span, a {
   text-align: center;
 }
 
+.justify {
+  text-align: justify;
+}
+
 /*
  * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
  * This results in a jumping cursor when typing in both the Classic and block
@@ -209,8 +213,17 @@ p, span, a {
   font-size: 3em;
   text-transform: uppercase;
 }
+.contactPage-content {
+  padding: 15px;
+}
+.contactPage-content .marginAuto {
+  margin: auto !important;
+}
 .contactPage-content #nf-form-1-cont {
   margin: auto;
+}
+.contactPage-content .nf-form-content {
+  padding: 0;
 }
 .contactPage-content .nf-form-content input[type=button].send-button {
   background: black;
