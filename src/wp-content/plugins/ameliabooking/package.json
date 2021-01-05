@@ -16,7 +16,7 @@
     "watch-cross": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=webpack.config.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "check-node-version": "^3.3.0",
     "element-ui": "^2.8.2",
